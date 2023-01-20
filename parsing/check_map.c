@@ -6,7 +6,7 @@
 /*   By: aamoussa <aamoussa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 20:49:42 by aamoussa          #+#    #+#             */
-/*   Updated: 2023/01/17 21:44:57 by aamoussa         ###   ########.fr       */
+/*   Updated: 2023/01/20 19:56:34 by aamoussa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,7 @@ void	check_map_walls(char **map, t_map_data data)
 	int	j;
 
 	i = 0;
-	if (ft_strchr(map[0], '0') || ft_strchr(map[data.map_height - 1], '0'))
-	{
-		printf("map is not surrounded by walls\n");
-		exit(1);
-	}
+	ft_check_first_line(map, data);
 	while (map[i])
 	{
 		scan_line(map[i]);

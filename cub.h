@@ -6,7 +6,7 @@
 /*   By: aamoussa <aamoussa@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 18:40:05 by aamoussa          #+#    #+#             */
-/*   Updated: 2023/01/20 10:36:43 by aamoussa         ###   ########.fr       */
+/*   Updated: 2023/01/20 19:16:36 by aamoussa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -146,5 +146,10 @@ char		*fill_the_grid(char *str, size_t len);
 int			create_trgb(int t, int r, int g, int b);
 void		check_map_walls(char **map, t_map_data data);
 int			exit_program(void);
-
+void		ft_clean_content(char ***splited_path, char **txr_path,
+				t_list **map, char *str);
+void		ft_free_splited(char **splited_path);
+void		check_textures(t_map_data *data);
+void		ft_check_first_line(char **map, t_map_data data);
+int			ft_check_file(char *file);
 #endif
